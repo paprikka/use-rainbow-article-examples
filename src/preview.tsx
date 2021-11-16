@@ -1,5 +1,4 @@
 import styles from './preview.module.css'
-import './global.css'
 import { FunctionComponent } from 'preact'
 
 export const Preview: FunctionComponent<{ src: string }> = ({ src }) => (

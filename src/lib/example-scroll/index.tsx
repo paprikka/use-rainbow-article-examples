@@ -1,13 +1,11 @@
-import { render } from 'preact'
 import { useState } from 'preact/hooks'
-import '../src/global.css'
 import styles from './index.module.css'
-import { Browser } from '../src/components/browser'
-import { Controls, SliderInput } from '../src/components/controls'
-import { HSLWheel } from '../src/components/hsl-wheel'
-import { StaticSwatch } from '../src/components/static-swatch'
+import { Browser } from '../../components/browser'
+import { Controls, SliderInput } from '../../components/controls'
+import { HSLWheel } from '../../components/hsl-wheel'
+import { StaticSwatch } from '../../components/static-swatch'
 
-const Test = () => {
+export const ExampleScroll = () => {
     const [scrollPosition, setScrollPosition] = useState(20)
 
     const handleChange = (val: number) => {
@@ -47,5 +45,3 @@ const Test = () => {
         </div>
     )
 }
-
-render(<Test />, document.getElementById('app')!)
