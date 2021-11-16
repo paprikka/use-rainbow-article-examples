@@ -48,10 +48,10 @@
     content: '';
     display: block;
     position: absolute;
-    top: 10%;
-    right: 10%;
-    bottom: 10%;
-    left: 10%;
+    top: 15%;
+    right: 15%;
+    bottom: 15%;
+    left: 15%;
 
     border-radius: 100%;
     background-color: var(--color-bg);

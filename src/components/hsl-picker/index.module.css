@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex: 1;
+}
+
+.canvas {
+}
+
+.canvas svg {
+    width: 100%;
+    height: auto;
+}
+
+.ring {
+    position: relative;
+    padding: 100% 0 0;
+}
+
+.ringLayer {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1000em;
+}
+
+.firstLayer {
+    z-index: 0;
+}
+
+.secondLayer {
+    z-index: 1;
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: var(--color-bg);
+    border-radius: 1000em;
+    transform: translate(-50%, -50%);
+}
+
+.swatch {
+    z-index: 2;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border-radius: 100rem;
+    border: 3px solid var(--color-bg);
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(5px);
+}
