@@ -1,0 +1,5 @@
+.frame {
+  aspect-ratio: 16 / 9;
+  border: 1px dashed #666;
+  width: 100%;
+}
