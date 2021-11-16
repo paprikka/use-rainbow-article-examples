@@ -8,15 +8,20 @@
 
 .mockContent {
     height: 300%;
+    width: 100%;
+    padding: 20%;
 }
 
 .mockPara {
     width: 100%;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 .mockPara:nth-child(even) {
-    transform: scaleX(-1);
+    transform: scaleX(-1) rotate(2deg);
+}
+.mockPara:nth-child(odd) {
+    transform: rotate(2deg);
 }
 
 .mockPara img {
@@ -54,7 +59,7 @@
 .window {
     /* flex: 1; */
     aspect-ratio: 4/3;
-    border: 1px solid #333;
+    border: 2px solid black;
     position: relative;
 }
 
@@ -77,5 +82,30 @@
     margin: 0;
     top: 0;
     height: 10%;
-    background-color: #333;
+    background-color: white;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0.25rem;
+}
+
+.windowHeader span {
+    margin-right: 0.25rem;
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: black;
+    border-radius: 100rem;
+}
+
+.windowHeader span:nth-child(1) {
+    background-color: rgb(250, 103, 58);
+}
+
+.windowHeader span:nth-child(2) {
+    background-color: rgb(250, 199, 58);
+}
+.windowHeader span:nth-child(3) {
+    background-color: rgb(161, 252, 119);
 }

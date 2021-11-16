@@ -25,15 +25,17 @@
 }
 
 .spacer {
-    min-width: 3rem;
-    margin: 0 1rem;
+    min-width: 10%;
+    margin: 1rem;
     display: flex;
     align-items: center;
+    text-align: center;
     flex: 1;
     background: url('./separator.png');
-    background-size: 100%;
+    background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
+    animation: separator-ani 0.5s 0s ease-in-out infinite alternate;
 }
 
 .wheel {
@@ -45,4 +47,14 @@
 }
 
 .controls {
+}
+
+@keyframes separator-ani {
+    from {
+        transform: translate(-5%);
+    }
+
+    to {
+        transform: translate(5%);
+    }
 }

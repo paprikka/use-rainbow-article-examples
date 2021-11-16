@@ -28,7 +28,11 @@ export const Browser: FunctionalComponent<{
             <div className={styles.containerOverlay}>
                 <div className={styles.beforeWindow}></div>
                 <div className={styles.window}>
-                    <div className={styles.windowHeader}></div>
+                    <div className={styles.windowHeader}>
+                        <span />
+                        <span />
+                        <span />
+                    </div>
                 </div>
 
                 <div className={styles.afterWindow}></div>
