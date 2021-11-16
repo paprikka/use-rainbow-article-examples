@@ -1,0 +1,81 @@
+.container {
+    background-color: yellow;
+    display: flex;
+    padding: 0.5rem;
+    overflow: hidden;
+    height: 100%;
+}
+
+.mockContent {
+    height: 300%;
+}
+
+.mockPara {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.mockPara:nth-child(even) {
+    transform: scaleX(-1);
+}
+
+.mockPara img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.containerOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.beforeWindow,
+.afterWindow {
+    --from: var(--color-bg);
+    --to: var(--color-bg-fade);
+}
+
+.beforeWindow {
+    background: linear-gradient(var(--from) 0%, var(--to) 90%);
+    flex: 1;
+}
+
+.afterWindow {
+    background: linear-gradient(var(--to) 0%, var(--from) 90%);
+    flex: 1;
+}
+
+.window {
+    /* flex: 1; */
+    aspect-ratio: 4/3;
+    border: 1px solid #333;
+    position: relative;
+}
+
+@supports not (aspect-ratio: 4/3) {
+    .window::before {
+        float: left;
+        padding-top: 75%;
+        content: '';
+    }
+
+    .window::after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+}
+
+.windowHeader {
+    padding: 0;
+    margin: 0;
+    top: 0;
+    height: 10%;
+    background-color: #333;
+}

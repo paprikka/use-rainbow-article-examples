@@ -1,0 +1,19 @@
+.label {
+    margin: 0;
+    display: block;
+    color: var(--color-text);
+}
+
+.label input {
+    font-family: var(--font-body);
+    display: block;
+    width: 100%;
+}
+
+.label span {
+    font-size: 1.5rem;
+}
+
+.container {
+    margin-bottom: calc(var(--ru) * 1rem);
+}

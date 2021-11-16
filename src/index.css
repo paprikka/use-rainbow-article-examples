@@ -1,30 +1,20 @@
 html,
 body {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  background: #fafafa;
-  font-family: "Helvetica Neue", arial, sans-serif;
-  font-weight: 400;
-  color: #444;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #fafafa;
+    font-family: 'Helvetica Neue', arial, sans-serif;
+    font-weight: 400;
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 #app {
-  height: 100%;
-  text-align: center;
-  background-color: #fafafa;
-  color: #333;
-  font-size: 1.5em;
-  padding-top: 100px;
+    padding: 0.5rem;
 }
-
-.link {
-  color: blue;
+* {
+    box-sizing: border-box;
 }

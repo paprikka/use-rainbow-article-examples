@@ -1,17 +1,47 @@
 .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .container > * {
-  box-shadow: 0 0 0 4px red inset;
+    /* box-shadow: 0 0 0 4px red inset; */
 }
 
 .main {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
 }
 
 .browser {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 30vh;
+}
+
+.spacer {
+    min-width: 3rem;
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    background: url('./separator.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .wheel {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 
 .controls {

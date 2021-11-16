@@ -1,0 +1,12 @@
+.main {
+    position: absolute;
+
+    width: 20%;
+    height: 12%;
+    left: 5%;
+    background-color: blue;
+
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

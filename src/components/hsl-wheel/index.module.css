@@ -1,0 +1,58 @@
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aspectRatioContainer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+@supports not (aspect-ratio: 1/1) {
+    .aspectRatioContainer::before {
+        float: left;
+        padding-top: 100%;
+        content: '';
+    }
+
+    .aspectRatioContainer::after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+}
+
+.colourRing {
+    top: 0;
+    position: absolute;
+    border-radius: 100rem;
+    background: conic-gradient(
+        from 30deg,
+        hsl(0deg, 100%, 50%),
+        hsl(60deg, 100%, 50%) 30deg,
+        hsl(120deg, 100%, 50%) 90deg,
+        hsl(180deg, 100%, 50%) 150deg,
+        hsl(240deg, 100%, 50%) 210deg,
+        hsl(300deg, 100%, 50%) 270deg,
+        hsl(360deg, 100%, 50%) 330deg,
+        hsl(0deg, 100%, 50%)
+    );
+    width: 100%;
+    height: 100%;
+}
+
+.colourRing:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    bottom: 10%;
+    left: 10%;
+
+    border-radius: 100%;
+    background-color: var(--color-bg);
+}
