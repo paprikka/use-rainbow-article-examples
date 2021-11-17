@@ -1,0 +1,58 @@
+.container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    background: url('./friend-face-normal.png');
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 1000rem;
+    overflow: hidden;
+}
+
+@supports not (aspect-ratio: 1/1) {
+    .container::before {
+        float: left;
+        padding-top: 100%;
+        content: '';
+    }
+
+    .container::after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+}
+
+.rgbOverlay,
+.hslOverlay,
+.vampireOverlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+}
+.rgbOverlay {
+    mix-blend-mode: lighten;
+}
+
+.vampireOverlay {
+    z-index: 2;
+    background: url('./friend-face-vampiric.png');
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+    transition: 0.2s opacity, 0.2s visibility;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.isVampire .vampireOverlay {
+    opacity: 1;
+    visibility: visible;
+}
