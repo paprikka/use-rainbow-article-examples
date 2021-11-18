@@ -9,7 +9,7 @@ export const ExampleHueShiftHSL = () => {
 
     return (
         <div className={styles.container}>
-            <Susan hue={h} showTeeth={Math.abs(h - targetH) < 5} />
+            <Susan hue={h} showTeeth={Math.abs(h - targetH) < 10} />
             <br />
             <div className={styles.controls}>
                 <Controls>
