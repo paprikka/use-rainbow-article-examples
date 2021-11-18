@@ -1,13 +1,9 @@
 .container {
     position: relative;
-    width: 100%;
+    width: 80%;
+    align-self: center;
     aspect-ratio: 1 / 1;
 
-    background: url('./friend-face-normal.png');
-    background-size: 60%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #fff;
     border-radius: 1000rem;
     overflow: hidden;
 }
@@ -25,10 +21,17 @@
         clear: both;
     }
 }
-
+.baseImage {
+    background: url('./friend-face-normal.png');
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+}
 .rgbOverlay,
 .hslOverlay,
-.vampireOverlay {
+.vampireOverlay,
+.baseImage {
     position: absolute;
     left: 0;
     right: 0;

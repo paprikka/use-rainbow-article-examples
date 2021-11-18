@@ -1,9 +1,11 @@
 import {
     ExampleScroll,
     ExampleRGBHSL,
-    ExampleHueShift,
+    ExampleHueShiftHSL,
+    ExampleHueShiftRGB,
     mountExample,
 } from './lib'
 mountExample(ExampleScroll, '.example-scroll')
 mountExample(ExampleRGBHSL, '.example-rgb-hsl')
-mountExample(ExampleHueShift, '.example-hue-shift')
+mountExample(ExampleHueShiftRGB, '.example-hue-shift-rgb')
+mountExample(ExampleHueShiftHSL, '.example-hue-shift-hsl')
