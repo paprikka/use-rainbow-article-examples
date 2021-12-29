@@ -17,7 +17,15 @@ export const HSLPicker: FunctionalComponent = () => {
 
     useEffect(() => {
         if (!containerEl.current) return
-        setRect(containerEl.current.getBoundingClientRect())
+
+        const onResize = () =>
+            setRect(containerEl.current.getBoundingClientRect())
+
+        window.addEventListener('resize', onResize)
+        onResize()
+        return () => {
+            window.removeEventListener('resize', onResize)
+        }
     }, [containerEl.current])
 
     useEffect(() => {
