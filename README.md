@@ -19,8 +19,12 @@ Run `$ npm run build` to create a library budle (ES modules and UMD).
 ### Embed
 
 ```html
+<div class="embed example-rgb-hsl"></div>
+
+<!-- ... -->
+
 <script src="https://unpkg.com/preact?umd"></script>
-<script src="/js/use-rainbow/examples.umd.js"></script>
+<script src="<dist>/examples.umd.js"></script>
 
 <script type="module">
     Examples.mountExample(Examples.ExampleRGBHSL, '.example-rgb-hsl')
